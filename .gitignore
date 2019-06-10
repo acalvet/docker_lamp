@@ -10,11 +10,12 @@
 !LICENSE
 
 # Docker folders
+!Makefile
 !.env
 !/conf/
-# !/data/mysql/.gitkeep
 !/docs/
-# !/logs/apache/.gitkeep
-# !/logs/mysql/.gitkeep
 !/www/.gitkeep
 !docker-compose.yml
+# !/data/mysql/.gitkeep
+# !/logs/apache/.gitkeep
+# !/logs/mysql/.gitkeep
