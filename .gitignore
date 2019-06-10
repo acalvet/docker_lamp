@@ -10,10 +10,10 @@
 !LICENSE
 
 # Docker folders
-!/assets/
-!/data/mysql/.gitkeep
+!/conf/
+# !/data/mysql/.gitkeep
 !/docs/
-!/logs/apache/.gitkeep
-!/logs/mysql/.gitkeep
-!/www/index.php
+# !/logs/apache/.gitkeep
+# !/logs/mysql/.gitkeep
+!/www/.gitkeep
 !docker-compose.yml

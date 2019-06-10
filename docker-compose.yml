@@ -2,43 +2,25 @@ version: "3"
 
 services:
 
-  php:
+  www:
     build:
-      context: ./assets/fpm
-    container_name: 'php'
-    restart: unless-stopped
+      context: conf/www
+    container_name: 'www'
+    restart: always
     ports:
-      - "35729:35729"
+      - "8001:80"
     volumes:
       - ./www:/var/www/html
-      - ./assets/fpm/custom.ini:/usr/local/etc/php/conf.d/custom.ini
-      - ./assets/fpm/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
-
-  apache:
-    build:
-      context: ./assets/apache
-    container_name: 'apache'
-    restart: unless-stopped
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./www:/var/www/html
-      - ./assets/apache/hosts:/etc/apache2/sites-enabled
-      - ./logs/apache:/var/log/apache2
     links:
-      - php
+      - mysql
 
   mysql:
     build:
-      context: ./assets/mysql
+      context: conf/mysql
     container_name: 'mysql'
-    restart: unless-stopped
+    restart: always
     ports:
       - "3306:3306"
-    volumes:
-      - ./data/mysql:/var/lib/mysql
-      - ./logs/mysql:/var/log/mysql
     environment:
       MYSQL_ROOT_PASSWORD: test
       MYSQL_DATABASE: test
