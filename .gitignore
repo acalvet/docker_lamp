@@ -1,8 +1,11 @@
 # IDE
-.idea/
+.idea
 
 # Environment
-data/mysql/
-logs/apache/
-logs/mysql/
-www/
+/data/mysql
+/logs/apache
+/logs/mysql
+/www
+
+# Keep .gitkeep files
+!/**/.gitkeep
