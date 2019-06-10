@@ -1,11 +1,19 @@
+# Ignore everything in the root
+#/*
+
 # IDE
 .idea
 
-# Environment
-/data/mysql
-/logs/apache
-/logs/mysql
-/www
+# GIT
+!.gitignore
+!README.md
+!LICENSE
 
-# Keep .gitkeep files
-!/**/.gitkeep
+# Docker folders
+!/assets/
+!/data/mysql/.gitkeep
+!/docs/
+!/logs/apache/.gitkeep
+!/logs/mysql/.gitkeep
+!/www/index.php
+!docker-compose.yml
