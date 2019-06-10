@@ -1,0 +1,8 @@
+# IDE
+.idea/
+
+# Environment
+data/mysql/
+logs/apache/
+logs/mysql/
+www/
