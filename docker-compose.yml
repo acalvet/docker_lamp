@@ -11,6 +11,7 @@ services:
       - "8001:80"
     volumes:
       - ./www:/var/www/html
+      - ./conf/www/apache/virtualhost.conf:/etc/apache2/sites-enabled/000-default.conf
     links:
       - mysql
 
