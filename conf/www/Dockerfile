@@ -1,4 +1,6 @@
-FROM php:7.3-apache
+ARG PHP_VERSION
+
+FROM php:${PHP_VERSION}-apache
 
 RUN apt-get update
 RUN apt-get upgrade -y
